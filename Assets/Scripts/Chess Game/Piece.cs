@@ -19,6 +19,10 @@ public abstract class Piece : MonoBehaviour
 
 	public abstract List<Vector2Int> SelectAvaliableSquares();
 
+	/// <summary>
+	/// Es werden alle Awake() Methoden vor dem Start des Spiels ausgeführt.
+	/// Das Spiel startet in der Klasse ChessGameController mit der Methode Start()
+	/// </summary>
 	private void Awake()
 	{
 		avaliableMoves = new List<Vector2Int>();

@@ -31,6 +31,4 @@ public class Rook : Piece
         }
         return avaliableMoves;
     }
-
-  
 }

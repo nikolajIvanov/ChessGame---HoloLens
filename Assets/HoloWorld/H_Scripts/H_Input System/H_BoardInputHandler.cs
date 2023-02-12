@@ -1,18 +1,20 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class H_BoardInputHandler : MonoBehaviour
+[RequireComponent(typeof(H_Board))]
+public class H_BoardInputHandler : MonoBehaviour, H_IInputHandler
 {
-    // Start is called before the first frame update
-    void Start()
+    private H_Board board;
+
+    private void Awake()
     {
-        
+        board = GetComponent<H_Board>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ProcessInput(Vector3 inputPosition, GameObject selectedObject, Action onClick)
     {
-        
+        board.OnSquareSelected(inputPosition);
     }
 }

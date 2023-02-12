@@ -23,6 +23,11 @@ public class ChessGameController : MonoBehaviour
 
     private GameState state;
 
+    
+    /// <summary>
+    /// Es werden alle Awake() Methoden vor dem Start des Spiels ausgeführt.
+    /// Das Spiel startet in der Klasse ChessGameController mit der Methode Start()
+    /// </summary>
     private void Awake()
     {
         SetDependencies();
@@ -66,9 +71,16 @@ public class ChessGameController : MonoBehaviour
     }
 
 
-
+    /// <summary>
+    /// Hier werden die Informationen vom BoardLayout geholt (BoardLayout.cs)
+    /// position
+    /// pieceType
+    /// teamColor
+    /// </summary>
+    /// <param name="layout"></param>
     private void CreatePiecesFromLayout(BoardLayout layout)
     {
+        // Die Schleife durchläuft 32 Durchgänge (layout.GetPiecesCount())
         for (int i = 0; i < layout.GetPiecesCount(); i++)
         {
             Vector2Int squareCoords = layout.GetSquareCoordsAtIndex(i);
@@ -76,6 +88,7 @@ public class ChessGameController : MonoBehaviour
             string typeName = layout.GetSquarePieceNameAtIndex(i);
 
             Type type = Type.GetType(typeName);
+            // Nachdem alle Infos geholt wurden, wird die Figur in der Methode erstellt
             CreatePieceAndInitialize(squareCoords, team, type);
         }
     }
@@ -86,7 +99,8 @@ public class ChessGameController : MonoBehaviour
     {
         Piece newPiece = pieceCreator.CreatePiece(type).GetComponent<Piece>();
         newPiece.SetData(squareCoords, team, board);
-
+        
+        // TODO: Sollte nicht benötigt werden, da die Figuren mit einem Material gesetzt werden
         Material teamMaterial = pieceCreator.GetTeamMaterial(team);
         newPiece.SetMaterial(teamMaterial);
 
