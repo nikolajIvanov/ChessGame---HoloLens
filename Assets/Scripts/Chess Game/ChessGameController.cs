@@ -27,6 +27,10 @@ public class ChessGameController : MonoBehaviour
     /// <summary>
     /// Es werden alle Awake() Methoden vor dem Start des Spiels ausgeführt.
     /// Das Spiel startet in der Klasse ChessGameController mit der Methode Start()
+    /// Klassen die eine Awake Methode haben:
+    /// ChessGameController
+    /// Pieces Creator
+    /// Board
     /// </summary>
     private void Awake()
     {
@@ -99,13 +103,18 @@ public class ChessGameController : MonoBehaviour
     {
         Piece newPiece = pieceCreator.CreatePiece(type).GetComponent<Piece>();
         newPiece.SetData(squareCoords, team, board);
+        if (newPiece.team == TeamColor.Black)
+        {
+            newPiece.transform.rotation = Quaternion.Euler(0, 180, 0);
+            //newPiece.transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
         
         // TODO: Sollte nicht benötigt werden, da die Figuren mit einem Material gesetzt werden
-        Material teamMaterial = pieceCreator.GetTeamMaterial(team);
-        newPiece.SetMaterial(teamMaterial);
+        //Material teamMaterial = pieceCreator.GetTeamMaterial(team);
+        //newPiece.SetMaterial(teamMaterial);
 
         board.SetPieceOnBoard(squareCoords, newPiece);
-
+        
         ChessPlayer currentPlayer = team == TeamColor.White ? whitePlayer : blackPlayer;
         currentPlayer.AddPiece(newPiece);
     }

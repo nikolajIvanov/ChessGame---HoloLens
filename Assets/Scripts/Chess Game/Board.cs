@@ -16,7 +16,14 @@ public class Board : MonoBehaviour
     private ChessGameController chessController;
     private SquareSelectorCreator squareSelector;
 
-
+    /// <summary>
+    /// Es werden alle Awake() Methoden vor dem Start des Spiels ausgeführt.
+    /// Das Spiel startet in der Klasse ChessGameController mit der Methode Start()
+    /// Klassen die eine Awake Methode haben:
+    /// ChessGameController
+    /// Pieces Creator
+    /// Board
+    /// </summary>
     private void Awake()
     {
         squareSelector = GetComponent<SquareSelectorCreator>();

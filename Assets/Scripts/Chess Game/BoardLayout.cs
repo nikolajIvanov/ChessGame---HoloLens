@@ -11,7 +11,8 @@ public enum TeamColor
 
 public enum PieceType
 {
-    Pawn, Bishop, Knight, Rook, Queen, King
+    PawnBlack, BishopBlack, KnightBlack, RookBlack, QueenBlack, KingBlack,
+    PawnWhite, BishopWhite, KnightWhite, RookWhite, QueenWhite, KingWhite
 }
 
 [CreateAssetMenu(menuName = "Scriptable Objects/Board/Layout")]

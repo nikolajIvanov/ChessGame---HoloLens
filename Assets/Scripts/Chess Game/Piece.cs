@@ -65,6 +65,7 @@ public abstract class Piece : MonoBehaviour
 		this.team = team;
 		occupiedSquare = coords;
 		this.board = board;
+		// Das GameObjekt wird auf folgende Position im Bord gestellt
 		transform.position = board.CalculatePositionFromCoords(coords);
 	}
 

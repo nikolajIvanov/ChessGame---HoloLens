@@ -14,52 +14,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardSquares:
   - position: {x: 1, y: 1}
-    pieceType: 3
+    pieceType: 9
     teamColor: 1
   - position: {x: 2, y: 1}
-    pieceType: 2
+    pieceType: 8
     teamColor: 1
   - position: {x: 3, y: 1}
-    pieceType: 1
+    pieceType: 7
     teamColor: 1
   - position: {x: 4, y: 1}
-    pieceType: 4
+    pieceType: 10
     teamColor: 1
   - position: {x: 5, y: 1}
-    pieceType: 5
+    pieceType: 11
     teamColor: 1
   - position: {x: 6, y: 1}
-    pieceType: 1
+    pieceType: 7
     teamColor: 1
   - position: {x: 7, y: 1}
-    pieceType: 2
+    pieceType: 8
     teamColor: 1
   - position: {x: 8, y: 1}
-    pieceType: 3
+    pieceType: 9
     teamColor: 1
   - position: {x: 1, y: 2}
-    pieceType: 0
+    pieceType: 6
     teamColor: 1
   - position: {x: 2, y: 2}
-    pieceType: 0
+    pieceType: 6
     teamColor: 1
   - position: {x: 3, y: 2}
-    pieceType: 0
+    pieceType: 6
     teamColor: 1
   - position: {x: 4, y: 2}
-    pieceType: 0
+    pieceType: 6
     teamColor: 1
   - position: {x: 5, y: 2}
-    pieceType: 0
+    pieceType: 6
     teamColor: 1
   - position: {x: 6, y: 2}
-    pieceType: 0
+    pieceType: 6
     teamColor: 1
   - position: {x: 7, y: 2}
-    pieceType: 0
+    pieceType: 6
     teamColor: 1
   - position: {x: 8, y: 2}
-    pieceType: 0
+    pieceType: 6
     teamColor: 1
   - position: {x: 1, y: 8}
     pieceType: 3
